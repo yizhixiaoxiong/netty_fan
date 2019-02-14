@@ -1,0 +1,17 @@
+syntax="proto2";    //使用proto2
+
+package com.fan.protobuf;   //生成类的包名
+
+option optimize_for = SPEED;
+option java_package = "com.fan.protobuf.test";   //生成类的包名
+option java_outer_classname = "DataInfo";   //输出的类名
+
+//消息类以及消息字段
+message Student{
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+
+}
+
+

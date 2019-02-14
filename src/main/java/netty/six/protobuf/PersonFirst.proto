@@ -1,0 +1,47 @@
+syntax="proto2";    //使用proto2
+
+package netty.six.protobuf;   //生成类的包名
+
+option optimize_for = SPEED;
+option java_package = "netty.six.protobuf";   //生成类的包名
+option java_outer_classname = "MyDataInfo";   //输出的类名
+
+
+message MyMessage{
+
+    enum DataType{
+        PersonType = 1;
+        DogType = 2;
+        CarType = 3;
+    }
+
+    required DataType data_type = 1;
+
+    oneof dataBody{
+        Person person = 2;
+        Dog dog = 3;
+        Cat cat = 4;
+    }
+
+}
+
+//消息类以及消息字段
+message Person{
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+message Dog{
+    optional string name = 1;
+    optional int32 age = 2;
+}
+message Cat{
+    optional string name = 1;
+    optional int32 age = 2;
+}
+
+
+
+
+

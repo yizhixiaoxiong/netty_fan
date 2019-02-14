@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.fan'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//仓库
+repositories {
+    mavenCentral()
+}
+//依赖
+dependencies {
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile(
+            "io.netty:netty-all:4.1.10.Final",
+            "com.google.protobuf:protobuf-java:3.3.1",
+            "com.google.protobuf:protobuf-java-util:3.3.1"
+
+
+    )
+}
+
