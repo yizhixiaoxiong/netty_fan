@@ -13,9 +13,9 @@ import java.nio.channels.FileChannel;
  */
 public class NioTest4 {
     public static void main(String[] args) throws IOException {
-//        operationIO("input.txt", "output.txt",512);
-//
-//        operationNIO("input.txt", "output.txt", 4);
+        operationIO("input.txt", "output.txt",512);
+
+        operationNIO("input.txt", "output.txt", 4);
 
         operationNIO("input.txt", "output.txt", 512);
 
@@ -25,7 +25,6 @@ public class NioTest4 {
 
 
     /**
-     *
      * Description: IO操作
      *
      * @param:  inputFile   : 源文件
