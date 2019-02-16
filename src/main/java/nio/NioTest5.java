@@ -27,5 +27,6 @@ public class NioTest5 {
         System.out.println(buffer.getDouble());
         System.out.println(buffer.getShort());
 
+
     }
 }
